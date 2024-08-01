@@ -2,11 +2,8 @@
 `include "design.v"
 
 module test;
-  reg clk;
-  reg front_sensor;
-  reg left_sensor;
-  wire front;
-  wire turn;
+  reg clk, front_sensor, left_sensor;
+  wire front, turn;
   
   top TOP(.clk(clk), .front_sensor(front_sensor),
           .left_sensor(left_sensor), .front(front), .turn(turn));
