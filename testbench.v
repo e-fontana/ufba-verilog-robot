@@ -34,8 +34,8 @@ module test;
   end
   
   task display;
-    #1 $display("clk: %0h, front_sensor: %0h, left_sensor: %0h, front: %0h, turn: %0h",
-     clk, front_sensor, left_sensor, front, turn);
+    #1 $display("front_sensor: %0h, left_sensor: %0h, front: %0h, turn: %0h",
+     front_sensor, left_sensor, front, turn);
   endtask
 
   task change_clock; begin
