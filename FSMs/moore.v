@@ -18,10 +18,9 @@ module moore(clk, front_sensor, left_sensor, front, turn);
     begin
         case (state)
             NoEntry: case ({front_sensor, left_sensor})
+                2'b00: next_state <= NoEntry;
                 2'b01: next_state <= LeftEntry;
-                2'b10: next_state <= FrontEntry;
-                2'b11: next_state <= FrontEntry;
-                default: next_state <= NoEntry;
+                default: next_state <= FrontEntry;
             endcase
             LeftEntry: case ({front_sensor, left_sensor})
                 2'b01: next_state <= LeftEntry;
@@ -35,5 +34,4 @@ module moore(clk, front_sensor, left_sensor, front, turn);
             default: next_state <= NoEntry;
         endcase
     end
-
 endmodule
