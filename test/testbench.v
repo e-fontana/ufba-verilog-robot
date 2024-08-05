@@ -1,5 +1,4 @@
-
-`include "design.v"
+`include "./design.v"
 
 module test;
   reg clk, front_sensor, left_sensor;

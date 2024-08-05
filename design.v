@@ -1,5 +1,5 @@
 `include "./FSMs/moore.v"
-`include "./FSMs/mealey.v"
+`include "./FSMs/mealy.v"
 
 module top (
     clk,
@@ -11,6 +11,5 @@ module top (
     input clk, front_sensor, left_sensor;
     output front, turn;
 
-    moore mealey_FSM(clk, front_sensor, left_sensor, front, turn);
-
+    moore FSM(clk, front_sensor, left_sensor, front, turn);
 endmodule
