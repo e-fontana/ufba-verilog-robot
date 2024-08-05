@@ -1,4 +1,4 @@
-module mealey(clk, front_sensor, left_sensor, front, turn);
+module mealy(clk, front_sensor, left_sensor, front, turn);
     input clk, front_sensor, left_sensor;
     output front, turn;
 
