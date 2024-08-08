@@ -10,68 +10,80 @@ module mealy(clk, front_sensor, left_sensor, front, turn);
 
     reg [1:0] state, next_state;
 
-    always @(posedge clk) state <= next_state;
+    always @(negedge clk) begin
+        // $display("state: %b, next_state: %b", state, next_state);
+        state <= next_state;
+    end
 
     always @(state or front_sensor or left_sensor)
     begin
         case (state)
             NoEntry: case ({front_sensor, left_sensor})
                 2'b01: begin
-                    front <= 1'b1;
-                    turn <= 1'b0;
-                    next_state <= LeftEntry;
+                    next_state = LeftEntry;
+                    front = 1'b1;
+                    turn = 1'b0;
                 end
                 2'b10: begin
-                    front <= 1'b0;
-                    turn <= 1'b1;
-                    next_state <= FrontEntry;
+                    next_state = FrontEntry;
+                    front = 1'b0;
+                    turn = 1'b1;
                 end
                 2'b11: begin
-                    front <= 1'b0;
-                    turn <= 1'b1;
-                    next_state <= FrontEntry;
+                    next_state = FrontEntry;
+                    front = 1'b0;
+                    turn = 1'b1;
                 end
                 default: begin
-                    front <= 1'b1;
-                    turn <= 1'b0;
-                    next_state <= NoEntry;
+                    next_state = NoEntry;
+                    front = 1'b1;
+                    turn = 1'b0;
                 end
             endcase
             LeftEntry: case ({front_sensor, left_sensor})
+                2'b00: begin
+                    next_state = NoEntry;
+                    front = 1'b0;
+                    turn = 1'b1;
+                end
                 2'b01: begin
-                    front <= 1'b1;
-                    turn <= 1'b0;
-                    next_state <= LeftEntry;
+                    next_state = LeftEntry;
+                    front = 1'b1;
+                    turn = 1'b0;
                 end
                 2'b11: begin
-                    front <= 1'b0;
-                    turn <= 1'b1;
-                    next_state <= FrontEntry;
+                    next_state = FrontEntry;
+                    front = 1'b0;
+                    turn = 1'b1;
                 end
                 default: begin
-                    front <= 1'b0;
-                    turn <= 1'b1;
-                    next_state <= NoEntry;
+                    next_state = NoEntry;
+                    front = 1'b0;
+                    turn = 1'b1;
                 end
             endcase
             FrontEntry: case ({front_sensor, left_sensor})
                 2'b01: begin
-                    front <= 1'b1;
-                    turn <= 1'b0;
-                    next_state <= LeftEntry;
+                    next_state = LeftEntry;
+                    front = 1'b1;
+                    turn = 1'b0;
                 end
                 2'b11: begin
-                    front <= 1'b0;
-                    turn <= 1'b1;
-                    next_state <= FrontEntry;
+                    next_state = FrontEntry;
+                    front = 1'b0;
+                    turn = 1'b1;
                 end
                 default: begin
-                    front <= 1'b0;
-                    turn <= 1'b1;
-                    next_state <= FrontEntry;
+                    next_state = FrontEntry;
+                    front = 1'b0;
+                    turn = 1'b1;
                 end
             endcase
-            default: next_state <= NoEntry;
+            default: begin
+                front = 1'b1;
+                turn = 1'b0;
+                next_state = NoEntry;
+            end
         endcase
     end
 

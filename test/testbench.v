@@ -3,52 +3,127 @@
 module test;
   reg clk, front_sensor, left_sensor;
   wire front, turn;
-  
+
   top TOP(.clk(clk), .front_sensor(front_sensor),
           .left_sensor(left_sensor), .front(front), .turn(turn));
 
+  always #1 clk <= ~clk;
+
   initial begin
-    clk = 1'b1;
-    test_sensor(0,0);
-    test_sensor(0,0);
-    test_sensor(1,0);
-    test_sensor(0,0);
-    test_sensor(0,0);
-    test_sensor(0,1);
-    test_sensor(0,1);
-    test_sensor(0,1);
-    test_sensor(0,1);
-    test_sensor(1,1);
-    test_sensor(1,0);
-    test_sensor(0,0);
-    test_sensor(0,1);
-    test_sensor(1,0);
-    test_sensor(0,0);
-    test_sensor(1,1);
-    test_sensor(1,0);
-    test_sensor(0,0);
-    test_sensor(0,1);
-    test_sensor(0,1);
-    test_sensor(0,1);
+    clk = 1'b0; front_sensor = 1'b0; left_sensor = 1'b0;
+    step(0,0);
+    step(0,0);
+    step(1,0);
+    step(0,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(1,0);
+    step(0,0);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(0,0);
+    step(0,0);
+    step(0,1);
+    step(0,0);
+    step(0,0);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,1);
+    step(0,0);
+    step(0,0);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,0);
+    step(0,0);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,1);
+    step(0,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(0,0);
+    step(0,0);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    step(0,1);
+    step(0,1);
+    step(1,1);
+    step(1,0);
+    step(0,0);
+    step(0,1);
+    #1 $finish;
   end
   
   task display;
-    #1 $display("front_sensor: %0h, left_sensor: %0h, front: %0h, turn: %0h",
+    $display("front_sensor: %0h, left_sensor: %0h, front: %0h, turn: %0h",
      front_sensor, left_sensor, front, turn);
   endtask
-
-  task change_clock; begin
-    #1 clk = ~clk;
-    #2 clk = ~clk;
-  end
-  endtask
-
-  task test_sensor(input [1:0] f_sensor, l_sensor);
-    #1 begin
-      front_sensor <= f_sensor;
-      left_sensor <= l_sensor;
-      change_clock;
-      display;
+  task step(input [1:0] f_sensor, l_sensor);
+    begin
+      #1 begin
+        front_sensor = f_sensor;
+        left_sensor = l_sensor;
+      end
+      #1 display;
     end
   endtask
 
