@@ -11,5 +11,5 @@ module top (
     input clk, front_sensor, left_sensor;
     output front, turn;
 
-    moore FSM(clk, front_sensor, left_sensor, front, turn);
+    mealy FSM(clk, front_sensor, left_sensor, front, turn);
 endmodule
