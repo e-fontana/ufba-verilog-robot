@@ -1,6 +1,7 @@
 module mealy(clk, front_sensor, left_sensor, front, turn);
     input clk, front_sensor, left_sensor;
     output front, turn;
+    
     reg front, turn;
 
     parameter NoEntry = 2'b00,
@@ -9,7 +10,7 @@ module mealy(clk, front_sensor, left_sensor, front, turn);
 
     reg [1:0] state = NoEntry, next_state;
 
-    always @(negedge clk) state <= next_state;
+    always @(posedge clk) state <= next_state;
 
     always @(state or front_sensor or left_sensor)
     begin
@@ -75,9 +76,7 @@ module mealy(clk, front_sensor, left_sensor, front, turn);
                     turn = 1'b1;
                 end
             endcase
-            default: begin
-                next_state = NoEntry;
-            end
+            default: next_state = NoEntry;
         endcase
     end
 endmodule
