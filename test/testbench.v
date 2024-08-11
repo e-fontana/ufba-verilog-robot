@@ -1,5 +1,5 @@
 `include "./design.v"
-`include "./frequency_divisor/design.v"
+
 module test;
   wire front, turn, clk;
   reg clk50, front_sensor, left_sensor;
