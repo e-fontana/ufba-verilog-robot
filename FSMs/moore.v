@@ -7,9 +7,9 @@ module moore(clk, front_sensor, left_sensor, front, turn);
      FrontEntry = 2'b10,
      BothEntry = 2'b11;
 
-    reg [1:0] state, next_state;
+    reg [1:0] state = NoEntry, next_state;
 
-    always @(posedge clk) state <= next_state;
+    always @(negedge clk) state <= next_state;
 
     assign front = (state == LeftEntry) | (state == NoEntry);
     assign turn = (state == FrontEntry) | (state == BothEntry);
@@ -18,20 +18,20 @@ module moore(clk, front_sensor, left_sensor, front, turn);
     begin
         case (state)
             NoEntry: case ({front_sensor, left_sensor})
-                2'b00: next_state <= NoEntry;
-                2'b01: next_state <= LeftEntry;
-                default: next_state <= FrontEntry;
+                2'b00: next_state = NoEntry;
+                2'b01: next_state = LeftEntry;
+                default: next_state = FrontEntry;
             endcase
             LeftEntry: case ({front_sensor, left_sensor})
-                2'b01: next_state <= LeftEntry;
-                2'b11: next_state <= FrontEntry;
-                default: next_state <= BothEntry;
+                2'b01: next_state = LeftEntry;
+                2'b11: next_state = FrontEntry;
+                default: next_state = BothEntry;
             endcase
             FrontEntry: case ({front_sensor, left_sensor})
-                2'b01: next_state <= LeftEntry;
-                default: next_state <= FrontEntry;
+                2'b01: next_state = LeftEntry;
+                default: next_state = FrontEntry;
             endcase
-            default: next_state <= NoEntry;
+            default: next_state = NoEntry;
         endcase
     end
 endmodule
