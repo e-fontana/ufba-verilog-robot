@@ -16,7 +16,7 @@ module top #(parameter clk_frequency = 8)(
 
     frequency_divisor #(clk_frequency) FD(.clk_50(clk50), .clk(clk));
 
-    // mealy FSM(clk, front_sensor, left_sensor, front, turn);
-    moore FSM(clk, front_sensor, left_sensor, front, turn);
+    mealy FSM(clk, front_sensor, left_sensor, front, turn);
+    // moore FSM(clk, front_sensor, left_sensor, front, turn);
 
 endmodule
