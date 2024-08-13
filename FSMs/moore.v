@@ -9,7 +9,7 @@ module moore(clk, front_sensor, left_sensor, front, turn);
 
     reg [1:0] state = NoEntry, next_state;
 
-    always @(negedge clk) state <= next_state;
+    always @(posedge clk) state <= next_state;
 
     assign front = (state == LeftEntry) | (state == NoEntry);
     assign turn = (state == FrontEntry) | (state == BothEntry);

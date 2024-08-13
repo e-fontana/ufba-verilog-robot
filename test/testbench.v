@@ -11,12 +11,6 @@ module test;
 
   always #1 clk50 <= ~clk50;
 
-  always @(clk) begin
-    $display("CLK_CIRCUITO: %b", clk);
-  end
-
-  always @(clk50) $display("CLK_PLACA: %b", clk50);
-
   initial begin
     clk50 = 1'b0; front_sensor = 1'b0; left_sensor = 1'b0;
     step(0,0);
