@@ -4,12 +4,18 @@ module test;
   wire front, turn, clk;
   reg clk50, front_sensor, left_sensor;
 
-  parameter clk_frequency = 8;
+  parameter clk_frequency = 7;
 
   top #(clk_frequency) TOP(.clk(clk), .clk50(clk50), .front_sensor(front_sensor),
           .left_sensor(left_sensor), .front(front), .turn(turn));
 
   always #1 clk50 <= ~clk50;
+
+  always @(clk) begin
+    $display("CLK_CIRCUITO: %b", clk);
+  end
+
+  always @(clk50) $display("CLK_PLACA: %b", clk50);
 
   initial begin
     clk50 = 1'b0; front_sensor = 1'b0; left_sensor = 1'b0;
@@ -126,7 +132,7 @@ module test;
         front_sensor = f_sensor;
         left_sensor = l_sensor;
       end
-      #(clk_frequency * 3) display;
+      #(clk_frequency) display;
     end
   endtask
 endmodule

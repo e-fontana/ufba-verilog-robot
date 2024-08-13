@@ -2,11 +2,12 @@ module frequency_divisor #(parameter clk_frequency = 50000000) (clk_50, clk);
     input clk_50;
     output reg clk = 0;
 
-    reg [3:0] counter;
+    reg [3:0] counter = 3'b000;
 
     always @(posedge clk_50) begin
         if (counter < clk_frequency - 1) begin
             counter <= counter + 1;
+            clk <= 0;
         end else begin
             counter <= 0;
             clk <= ~clk;

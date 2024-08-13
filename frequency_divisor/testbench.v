@@ -9,7 +9,7 @@ module test;
 
     frequency_divisor #(clk_frequency) FD(clk50, clk);
 
-    always @(clk) display;
+    always @(posedge clk) display;
 
     initial begin
         clk50 = 0;
