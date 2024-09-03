@@ -1,9 +1,8 @@
 `include "./FSMs/moore.v"
-`include "./FSMs/mealy.v"
 `include "./frequency_divisor/design.v"
 
 
-module top #(parameter clk_frequency = 8)(
+module moore_top #(parameter clk_frequency = 8)(
     clk,
     clk50,
     front_sensor,
@@ -16,7 +15,5 @@ module top #(parameter clk_frequency = 8)(
 
     frequency_divisor #(clk_frequency) FD(.clk_50(clk50), .clk(clk));
 
-    mealy FSM(clk, front_sensor, left_sensor, front, turn);
-    // moore FSM(clk, front_sensor, left_sensor, front, turn);
-
+    moore FSM(clk, front_sensor, left_sensor, front, turn);
 endmodule

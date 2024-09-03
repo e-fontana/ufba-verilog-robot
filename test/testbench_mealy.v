@@ -1,12 +1,12 @@
-`include "./design.v"
+`include "./mealy.v"
 
 module test;
   wire front, turn, clk;
   reg clk50, front_sensor, left_sensor;
 
-  parameter clk_frequency = 7;
+  parameter clk_frequency = 8;
 
-  top #(clk_frequency) TOP(.clk(clk), .clk50(clk50), .front_sensor(front_sensor),
+  mealy_top #(clk_frequency) TOP(.clk(clk), .clk50(clk50), .front_sensor(front_sensor),
           .left_sensor(left_sensor), .front(front), .turn(turn));
 
   always #1 clk50 <= ~clk50;

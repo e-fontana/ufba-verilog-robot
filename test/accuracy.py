@@ -9,7 +9,7 @@ class Accuracy:
         self.UP = "\x1B[99A"
         self.CLR = "\x1B[0K"
         self.fail = None
-        self.output_path = "./build/output.csv"
+        self.output_path = "./output/mealy/mealy.csv"
         self.columns = "ABCDEFGHIJKLMNO"
         self.lines = "01234567"
         self.walls = ["A0","B0","C0","D0","E0","F0","G0","H0","I0","A1","H1","I1","A2","I2","A3","E3","F3","G3","I3","J3","K3","L3","M3","N3","O3","A4","E4","G4","I4","O4","A5","B5","C5","D5","E5","G5","N5","O5","E6","J6","K6","N6","E7","F7","G7","H7","I7","J7","K7","L7","M7","N7"]
