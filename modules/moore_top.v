@@ -1,7 +1,3 @@
-`include "./FSMs/moore.v"
-`include "./frequency_divisor/design.v"
-
-
 module moore_top #(parameter clk_frequency = 8)(
     clk,
     clk50,

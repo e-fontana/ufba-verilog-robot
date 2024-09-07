@@ -1,0 +1,218 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/fontana
+vfrequency_divisor
+Z0 !s110 1725667151
+!i10b 1
+!s100 YYeGQkf9`nW;?j^i88:DS3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ib^O]DEfARNZkGl5YZ2?mn1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 d/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modelsim
+Z4 w1725587301
+8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/frequency.v
+F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/frequency.v
+!i122 32
+L0 1 16
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1725667151.000000
+!s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/frequency.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/frequency.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+vfrequency_tb
+!s110 1725666980
+!i10b 1
+!s100 Pi?TYWU;2;mnC[eaVVz0h3
+R1
+ImP8VLR5gg7B5_a7d2KTfh1
+R2
+R3
+w1725666961
+Z9 8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_mealy.v
+Z10 F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_mealy.v
+!i122 22
+Z11 L0 1 130
+R5
+r1
+!s85 0
+31
+!s108 1725666980.000000
+Z12 !s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_mealy.v|
+Z13 !s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_mealy.v|
+!i113 1
+R7
+R8
+vmealy
+R0
+!i10b 1
+!s100 0=gib__h?WL:fIW:>Cmi00
+R1
+Ii=?kBeFXi^84?3RQmNa:70
+R2
+R3
+w1725636446
+8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy.v
+F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy.v
+!i122 33
+L0 1 94
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy.v|
+!i113 1
+R7
+R8
+vmealy_tb
+R0
+!i10b 1
+!s100 IUm;ZWT>bK=I_mhY_<Rkf3
+R1
+I=S?EmcL]5Y@mcVC`Q_D4H1
+R2
+R3
+w1725667107
+R9
+R10
+!i122 38
+R11
+R5
+r1
+!s85 0
+31
+R6
+R12
+R13
+!i113 1
+R7
+R8
+vmealy_top
+R0
+!i10b 1
+!s100 dYGWibEBNnOB[;>_Tc<U50
+R1
+I97KhmMKXH12kAJKaH4TB92
+R2
+R3
+w1725666879
+8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy_top.v
+F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy_top.v
+!i122 34
+Z14 L0 1 15
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy_top.v|
+!i113 1
+R7
+R8
+vmoore
+R0
+!i10b 1
+!s100 E:0ceR5iPaF]FMVREXgeN1
+R1
+I`QNiK[CRbN0;;Be?`ECQS1
+R2
+R3
+R4
+8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore.v
+F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore.v
+!i122 35
+L0 1 37
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore.v|
+!i113 1
+R7
+R8
+vmoore_tb
+R0
+!i10b 1
+!s100 :bZN<jAIMl^1okO_i5:>V0
+R1
+IFB7MddOjP;DR=`anGjPJe0
+R2
+R3
+w1725666978
+8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_moore.v
+F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_moore.v
+!i122 39
+L0 1 136
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_moore.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_moore.v|
+!i113 1
+R7
+R8
+vmoore_top
+R0
+!i10b 1
+!s100 cPfWcBCk42M5W@]H:IH^<2
+R1
+IMg0nZ7Q;[3`VGok?g@k:93
+R2
+R3
+w1725666884
+8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore_top.v
+F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore_top.v
+!i122 36
+R14
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore_top.v|
+!i113 1
+R7
+R8
+vtest
+R0
+!i10b 1
+!s100 7zTV6zA>JbZj5055UGkUi2
+R1
+IC4aa>zTkb]9GeCPSYTdWb0
+R2
+R3
+w1725666934
+8/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/frequency_tb.v
+F/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/frequency_tb.v
+!i122 37
+L0 1 25
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/frequency_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/frequency_tb.v|
+!i113 1
+R7
+R8

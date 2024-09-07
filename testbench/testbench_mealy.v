@@ -1,6 +1,4 @@
-`include "./mealy.v"
-
-module test;
+module mealy_tb;
   wire front, turn, clk;
   reg clk50, front_sensor, left_sensor;
 

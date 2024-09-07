@@ -1,0 +1,57 @@
+/home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_moore.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_moore.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module moore_tb
+
+Top level modules:
+	moore_tb
+
+} {} {}} /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore_top.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module moore_top
+
+Top level modules:
+	moore_top
+
+} {} {}} /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mealy
+
+Top level modules:
+	mealy
+
+} {} {}} /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_mealy.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/testbench_mealy.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mealy_tb
+
+Top level modules:
+	mealy_tb
+
+} {} {}} /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/frequency_tb.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/testbench/frequency_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/moore.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module moore
+
+Top level modules:
+	moore
+
+} {} {}} /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy_top.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/mealy_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mealy_top
+
+Top level modules:
+	mealy_top
+
+} {} {}} /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/frequency.v {1 {vlog -work work -stats=none /home/fontana/dev/ufba/engc40/ufba-verilog-robot/modules/frequency.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module frequency_divisor
+
+Top level modules:
+	frequency_divisor
+
+} {} {}}

@@ -1,0 +1,32 @@
+# Compile of frequency.v was successful.
+# Compile of mealy.v was successful.
+# Compile of mealy_top.v failed with 2 errors.
+# Compile of moore.v was successful.
+# Compile of moore_top.v failed with 2 errors.
+# 5 compiles, 2 failed with 4 errors.
+# Compile of frequency.v was successful.
+# Compile of mealy.v was successful.
+# Compile of mealy_top.v was successful.
+# Compile of moore.v was successful.
+# Compile of moore_top.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of frequency.v was successful.
+# Compile of mealy.v was successful.
+# Compile of mealy_top.v was successful.
+# Compile of moore.v was successful.
+# Compile of moore_top.v was successful.
+# Compile of frequency_tb.v was successful.
+# Compile of testbench_mealy.v was successful.
+# Compile of testbench_moore.v was successful.
+# 8 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of frequency.v was successful.
+# Compile of mealy.v was successful.
+# Compile of mealy_top.v was successful.
+# Compile of moore.v was successful.
+# Compile of moore_top.v was successful.
+# Compile of frequency_tb.v was successful.
+# Compile of testbench_mealy.v was successful.
+# Compile of testbench_moore.v was successful.
+# 8 compiles, 0 failed with no errors.

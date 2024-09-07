@@ -1,5 +1,3 @@
-`include "./moore.v"
-
 module test;
     wire front, turn, clk;
     reg clk50, front_sensor, left_sensor;
